@@ -1,3 +1,7 @@
 [submodule "luatweetnacl"]
 	path = luatweetnacl
 	url = https://github.com/philanc/luatweetnacl.git
+[submodule "test-app"]
+	path = test-app
+	branch = test-app
+	url = https://github.com/creationix/lit-tweetnacl.git
