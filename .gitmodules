@@ -1,0 +1,3 @@
+[submodule "luatweetnacl"]
+	path = luatweetnacl
+	url = https://github.com/philanc/luatweetnacl.git
