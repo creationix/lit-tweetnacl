@@ -2,11 +2,7 @@ LUAJIT_OS=$(shell luajit -e "print(require('ffi').os)")
 LUAJIT_ARCH=$(shell luajit -e "print(require('ffi').arch)")
 TARGET_DIR=$(LUAJIT_OS)-$(LUAJIT_ARCH)/
 
-ifeq ($(LUAJIT_OS), OSX)
-TWEETNACL_LIB=luatweetnacl.dylib
-else
 TWEETNACL_LIB=luatweetnacl.so
-endif
 
 libs: build
 	cmake --build build --config Release

@@ -13,3 +13,9 @@ add_library(luatweetnacl SHARED ${files})
 set_target_properties(luatweetnacl PROPERTIES PREFIX "")
 
 target_link_libraries(luatweetnacl)
+
+
+if (APPLE)
+  TARGET_LINK_LIBRARIES(luatweetnacl "-undefined dynamic_lookup")
+  set_target_properties(luatweetnacl PROPERTIES SUFFIX ".so")
+endif (APPLE)
